@@ -20,7 +20,7 @@ sites.each do |site| Latinamerica.create(
         region: site['fields']['region'],
         site: site['fields']['site'],
         states: site['fields']['states'],
-        image_url: site['fields']['image_url'],
+        image_url: site['fields']['image_url']['filename'],
         location: site['fields']['location'],
         short_description: site['fields']['short_description'],
         http_url: site['fields']['http_url']
