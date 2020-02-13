@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_12_10_092007) do
     t.string "site"
     t.string "states"
     t.string "image_url"
+    t.string "image_pic"
     t.string "location"
     t.string "short_description"
     t.string "http_url"

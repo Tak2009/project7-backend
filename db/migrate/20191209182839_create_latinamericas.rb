@@ -7,6 +7,7 @@ class CreateLatinamericas < ActiveRecord::Migration[6.0]
       t.string :site
       t.string :states
       t.string :image_url
+      t.string :image_pic
       t.string :location
       t.string :short_description
       t.string :http_url
