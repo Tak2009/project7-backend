@@ -1,0 +1,2 @@
+class Apac < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ApacsController < ApplicationController
+end
