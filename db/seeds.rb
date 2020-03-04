@@ -34,16 +34,16 @@ sites.each_with_index do |site, i| Latinamerica.create(
     )
 end
 
-# sites_asia.each_with_index do |site, i| Latinamerica.create(
-#     category: site['fields']['category'],
-#     id_number: site['fields']['id_number'],
-#     region: site['fields']['region'],
-#     site: site['fields']['site'],
-#     states: site['fields']['states'],
-#     image_pic: site['fields']['image_url']['filename'],
-#     location: site['fields']['location'],
-#     short_description: site['fields']['short_description'],
-#     http_url: site['fields']['http_url'],
-#     index: i
-# )
-# end
+sites_asia.each_with_index do |site, i| Apac.create(
+        category: site['fields']['category'],
+        id_number: site['fields']['id_number'],
+        region: site['fields']['region'],
+        site: site['fields']['site'],
+        states: site['fields']['states'],
+        image_pic: site['fields']['image_url']['filename'],
+        location: site['fields']['location'],
+        short_description: site['fields']['short_description'],
+        http_url: site['fields']['http_url'],
+        index: i
+)
+end
