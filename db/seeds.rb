@@ -17,7 +17,7 @@ sites = result['records']
 # byebug
 
 # Latinamerica.delete_all
-sites.each do |site| Latinamerica.create(
+sites.each_with_index do |site, i| Latinamerica.create(
         category: site['fields']['category'],
         id_number: site['fields']['id_number'],
         region: site['fields']['region'],
@@ -26,7 +26,8 @@ sites.each do |site| Latinamerica.create(
         image_pic: site['fields']['image_url']['filename'],
         location: site['fields']['location'],
         short_description: site['fields']['short_description'],
-        http_url: site['fields']['http_url']
+        http_url: site['fields']['http_url'],
+        index: i
     )
 end
 
