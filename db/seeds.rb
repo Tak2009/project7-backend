@@ -19,8 +19,8 @@ json_asia = Net::HTTP.get(uri_asia) #NET::HTTPを利用してAPIを呼ぶ
 result_asia = JSON.parse(json_asia) #返ってきたjsonデータをrubyの配列に変換するためのライン
 sites_asia = result_asia['records']
 
-# Latinamerica.delete_all
-sites.each_with_index do |site, i| Latinamerica.create(
+def createSite(sites, table_name)
+    sites.each_with_index do |site, i| table_name.create(
         category: site['fields']['category'],
         id_number: site['fields']['id_number'],
         region: site['fields']['region'],
@@ -32,18 +32,8 @@ sites.each_with_index do |site, i| Latinamerica.create(
         http_url: site['fields']['http_url'],
         index: i
     )
+    end
 end
 
-sites_asia.each_with_index do |site, i| Apac.create(
-        category: site['fields']['category'],
-        id_number: site['fields']['id_number'],
-        region: site['fields']['region'],
-        site: site['fields']['site'],
-        states: site['fields']['states'],
-        image_pic: site['fields']['image_url']['filename'],
-        location: site['fields']['location'],
-        short_description: site['fields']['short_description'],
-        http_url: site['fields']['http_url'],
-        index: i
-)
-end
+createSite(sites, Latinamerica)
+createSite(sites_asia, Apac)
