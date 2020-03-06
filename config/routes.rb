@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :europe_americas
   resources :apacs
   resources :reviews
   resources :latinamericas

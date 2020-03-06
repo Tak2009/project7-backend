@@ -1,0 +1,2 @@
+class EuropeAmericasController < ApplicationController
+end

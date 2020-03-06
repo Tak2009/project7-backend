@@ -1,0 +1,2 @@
+class EuropeAmerica < ApplicationRecord
+end
