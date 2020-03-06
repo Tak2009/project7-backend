@@ -45,4 +45,4 @@ end
 
 createSite(sites, Latinamerica)
 createSite(sites_asia, Apac)
-# createSite(sites_asia, Apac)
+createSite(sites_europe, EuropeAmerica)

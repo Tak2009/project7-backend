@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_04_220846) do
+ActiveRecord::Schema.define(version: 2020_03_06_125031) do
 
   create_table "apacs", force: :cascade do |t|
+    t.string "category"
+    t.integer "id_number"
+    t.string "region"
+    t.string "site"
+    t.string "states"
+    t.string "image_url"
+    t.string "image_pic"
+    t.string "location"
+    t.string "short_description"
+    t.string "http_url"
+    t.integer "index"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "europe_americas", force: :cascade do |t|
     t.string "category"
     t.integer "id_number"
     t.string "region"

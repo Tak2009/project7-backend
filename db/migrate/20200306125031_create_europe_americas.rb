@@ -1,6 +1,6 @@
 class CreateEuropeAmericas < ActiveRecord::Migration[6.0]
   def change
-    ccreate_table :europe_americas do |t|
+    create_table :europe_americas do |t|
       t.string :category
       t.integer :id_number
       t.string :region
