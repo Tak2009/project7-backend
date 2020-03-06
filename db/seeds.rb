@@ -33,7 +33,7 @@ def createSite(sites, table_name)
         id_number: site['fields']['id_number'],
         region: site['fields']['region'],
         site: site['fields']['site'],
-        states: site['fields']['states'],
+        states: site['fields']['states'][0,15],
         image_pic: site['fields']['image_url']['filename'],
         location: site['fields']['location'],
         short_description: site['fields']['short_description'],
